@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'z5i2e(a%xqfl2wp$!g%+3pl+2gqy*e7mgu8&3-lfa1zbti-5+w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1','bankar-expense-track.herokuapp.com']
 
