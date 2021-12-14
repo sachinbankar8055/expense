@@ -79,14 +79,22 @@ WSGI_APPLICATION = 'expensetracker.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME':'expense_tracker',
+#         'HOST':'127.0.0.1',
+#         'PORT':'3306',
+#         'USER':'root',
+#         'PASSWORD':'Sachin@123',
+#     }
+# }
+
+# Use sqlite for non live host
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME':'expense_tracker',
-        'HOST':'127.0.0.1',
-        'PORT':'3306',
-        'USER':'root',
-        'PASSWORD':'Sachin@123',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'coffee.sqlite3'),
     }
 }
 
