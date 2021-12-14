@@ -56,6 +56,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'expensetracker.urls'
+# ROOT_URLCONF = 'expensetrack.expensetracker.urls'
 
 TEMPLATES = [
     {
