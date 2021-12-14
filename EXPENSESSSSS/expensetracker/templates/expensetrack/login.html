@@ -1,0 +1,319 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+
+    <form action="login" method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="username"><br>
+        <input type="password" name="password" placeholder="password"><br>
+        <input type="submit">
+    </form>
+
+    
+    <div>
+
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+    </div>
+    
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+</head>
+
+<style>
+
+    body {
+        background: #077054;
+        color: #315f52;
+        font-family: 'latoregular';
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+   
+
+
+<!--    body {-->
+<!--    {% load static %}-->
+<!--    background: white url(" expen.jpeg ") no-repeat;-->
+<!--    {% load static %}-->
+<!--}-->
+
+
+
+
+
+    .left{
+
+        /* border: 2px solid red; */
+        display: inline-block;
+        position: absolute;
+        left:34px;
+        top: 20px;
+    }
+
+    .center{
+           /* border: 2px solid blue; */
+           display: block;
+           margin: 20px auto;
+           width:40%;
+    }
+
+    .right{
+
+        /* border: 2px solid yellow; */
+        position: absolute;
+        top: 20px;
+        right:10px;
+        display: inline-block;
+    }
+
+    .navbar{
+        display: inline-block;
+<!--        background-color:blue;-->
+    }
+
+    .navbar li{
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    .navbar li a{
+        color: white;
+        text-decoration: none;
+        padding: 35px;
+        ;
+    }
+
+
+    .navbar li a:hover,.navbar li a.active{
+        text-decoration: underline;
+        color: gray;
+    }
+
+    .left img{
+        width: 125px;
+    }
+
+    .left div{
+        text-align: center;
+    }
+
+    .btn{
+        margin: 0px 9px;
+        color:white;
+        background-color: black;
+        padding:4px 14px;
+        border: 2px solid gray;
+        border-radius: 15px;
+        font-style: 20px;
+        cursor: pointer;
+    }
+
+    .btn:hover{
+        background-color: rgb(0, 2, 128);
+    }
+
+    .container{
+        border: 5px solid black;
+        margin: 120px 880px;
+        padding:51px 5px;
+        width: 30%;
+        border-radius: 20%;
+        color:black;
+    }
+
+    
+    .container{
+        background: #ffffff;
+        margin: 1px auto 0;
+        overflow: hidden;
+        padding: 45px 40px 46px;
+    }
+
+
+    .forms1 input{
+<!--        text-align: center;-->
+<!--        display: block;-->
+        width: 250px;
+        color:black;
+        padding: 6px 5px;
+        margin: 3px 3px 0px 30px;
+        border: 2px solid green;
+    }
+
+      .forms2 input{
+<!--        text-align: center;-->
+<!--        display: block;-->
+        width: 250px;
+        color:black;
+        padding: 6px 5px;
+        margin: 3px 3px 0px 69px;
+        border: 2px solid green;
+    }
+
+      .forms3 input{
+
+        width: 250px;
+        color:black;
+        padding: 6px 5px;
+        
+        border: 2px solid green;
+        margin: 3px 3px 0px 28px;
+    }
+
+
+    .formss{
+    color:black;
+
+    }
+
+    .formss input{
+    color:black;
+           padding: 6px 5px;
+        margin: 11px auto;
+        border: 2px solid green;
+
+
+    }
+
+    .signin{
+       text-align: center;
+       display: block;
+       padding: 6px 5px;
+       font-weight: bold;
+        line-height: 20px;
+        font-size: 25px;
+       margin: 3px 40px 0px 0px;
+
+<!--        border: 2px solid green;-->
+
+
+    }
+
+
+    input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    font-size: 25px;
+    appearance: radio;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 50px;
+    padding: initial;
+    border: initial;
+    padding: 6px 5px;
+}
+
+
+    .container h1{
+        text-align: center;
+    }
+
+    .container button{
+     margin: 3px 3px 0px 155px;
+        display: block;
+        color:black;
+
+        width:101px;
+        background-color: lightblue;
+
+    }
+
+    .forms{
+        color: black;
+    }
+
+    
+    .eror{
+        margin: 0px 9px;
+        color:white;
+        background-color: black;
+        border: 2px solid gray;
+        border-radius: 15px;
+        font-style: 20px;
+        cursor: pointer;
+        padding:-49px 10px;
+        margin:-183px 568px 72px 523px;
+    }
+
+</style>
+<body>
+
+
+    <header class="header">
+        <div class="left">
+<!--            <img src="img/logo.jpg" alt="">-->
+<!--            <div>fittness club</div>-->
+        </div>
+        <div class="center">
+            <ul class="navbar">
+                <li><a href="#" class="active">login</a></li>
+                <li><a href="#">register</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+
+        </div>
+        <div class="right">
+            <button class="btn">call us</button>
+            <button class="btn">email us</button>
+        </div>
+    </header>
+
+    <form action="login" method="POST">
+        {% csrf_token %}
+
+        <div class="container">
+            <h1 style="color: black;">LOGIN TO EXPENSE TRACKER</h1>
+
+
+
+
+            <div class="forms1">
+                USERNAME:<input type="text" name="username" placeholder="username"><br>
+            </div>
+            <br>
+
+
+            <div class="forms1">
+                PASSWORD:<input type="password" name="password" placeholder="password"><br>
+            </div>
+
+           
+            
+
+            <button> <input type="submit"></button>
+            <div class="signin">
+                <p>if not registered then </p>
+                <a href="register">register</a>
+            </div>
+        </div>
+
+    </form>
+
+    
+    <div class="eror">
+
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+    </div>
+    
+
+</body>
+</html>

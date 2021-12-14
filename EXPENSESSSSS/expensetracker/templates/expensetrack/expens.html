@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+table, th, td {
+    border: 1px solid black;
+  }
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a  href="expense">Profile</a>
+  <a style="color:white; href="expens">expenses</a>
+  <a href="adexp">Add expenses</a>
+  <a href="#">Contact us</a>
+  <a href="logout">logout</a>
+</div>
+
+<div class="main">
+    <h2>hello, {{user.first_name}} </h2>
+  <h2>Welcome to expense tracker</h2>
+  <p>Here you can track your expenses </p>
+
+  <h2>hello, {{date}} </h2>
+
+  <table style="width:100%">
+    <tr>
+      <th>sr</th>
+      <th>date</th>
+      <th>food</th> 
+      <!-- <th>petrol</th> -->
+      <th>travel</th>
+      <th>shopping</th>
+      <!-- <th>rent</th> -->
+      <th>other</th>
+    </tr>
+
+    {% for task in tasks %}
+    
+    <tr>
+    <td> {{forloop.counter}} </td>
+    
+
+      <td> {{task.date}} </td>
+      <td> {{task.food}} </td>
+      <!-- <td> {{task.petrol}} </td> -->
+      <td> {{task.travel}} </td>
+      <td> {{task.movie}} </td>
+      <!-- <td> {{task.rent}} </td> -->
+      <td> {{task.other}} </td>
+      
+    </tr>
+   
+
+    {% endfor %}
+    
+  </table>
+
+</div>
+  
+
+
+</body>
+</html> 
+

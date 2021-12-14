@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\..\\web\\js"
+		},
+		{
+			"path": "..\\..\\..\\web\\php"
+		},
+		{
+			"path": "..\\..\\..\\web\\webfonts"
+		},
+		{
+			"path": "..\\..\\..\\web\\css"
+		},
+		{
+			"path": "..\\..\\..\\web\\images"
+		}
+	],
+	"settings": {}
+}

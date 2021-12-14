@@ -1,0 +1,925 @@
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+</head>
+
+<style>
+
+    <!-- body{
+        color: white;
+        margin: 0px;
+        padding: 0px;       background: url('expen.JPEG');
+        height:3500px;
+       background-color:lightgreen;
+
+    }  -->
+<!-- 
+    body {
+        background: #077054;
+        color: #315f52;
+        font-family: 'latoregular';
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+
+
+    .left{
+
+        /* border: 2px solid red; */
+        display: inline-block;
+        position: absolute;
+        left:34px;
+        top: 20px;
+    }
+
+    .center{
+           /* border: 2px solid blue; */
+           display: block;
+           margin: 20px auto;
+           width:40%;
+    }
+
+    .right{
+
+        /* border: 2px solid yellow; */
+        position: absolute;
+        top: 20px;
+        right:10px;
+        display: inline-block;
+    }
+
+    .navbar{
+        display: inline-block;
+<!--        background-color:blue;-->
+    <!-- }
+
+    .navbar li{
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    .navbar li a{
+        color: white;
+        text-decoration: none;
+        padding: 35px;
+        ;
+    }
+
+
+    .navbar li a:hover,.navbar li a.active{
+        text-decoration: underline;
+        color: gray;
+    }
+
+    .left img{
+        width: 125px;
+    }
+
+    .left div{
+        text-align: center;
+    }
+
+    .btn{
+        margin: 0px 9px;
+        color:white;
+        background-color: black;
+        padding:4px 14px;
+        border: 2px solid gray;
+        border-radius: 15px;
+        font-style: 20px;
+        cursor: pointer;
+    }
+
+    .btn:hover{
+        background-color: rgb(0, 2, 128);
+    }
+
+    .container{
+        border: 5px solid black;
+        margin: 120px 880px;
+        
+        width: 30%;
+        border-radius: 20%;
+        color:black;
+    }
+
+    .container{
+        background: #ffffff;
+        margin: 1px auto 0;
+        overflow: hidden;
+        padding: 45px 40px 46px;
+    }  -->
+
+
+    <!-- .forms1 input{ -->
+<!--        text-align: center;-->
+<!--        display: block;-->
+        <!-- width: 250px;
+        color:black;
+        padding: 6px 5px;
+        margin: 3px 3px 0px 30px;
+        border: 2px solid green;
+    } -->
+
+      <!-- .forms2 input{ -->
+<!--        text-align: center;-->
+<!--        display: block;-->
+        <!-- width: 250px;
+        color:black;
+        padding: 6px 5px;
+        margin: 3px 3px 0px 69px;
+        border: 2px solid green;
+    } -->
+
+      <!-- .forms3 input{ -->
+<!--        text-align: center;-->
+<!--        display: block;-->
+        <!-- width: 250px;
+        color:black;
+        padding: 6px 5px;
+        margin: 3px 3px 0px 28px;
+        border: 2px solid green;
+    }
+
+
+    .formss{
+    color:black;
+
+    }
+
+    .formss input{
+    color:black;
+           padding: 6px 5px;
+        margin: 11px auto;
+        border: 2px solid green;
+
+
+    }
+
+    .signin{
+       text-align: center;
+       display: block;
+       padding: 6px 5px;
+       font-weight: bold;
+        line-height: 20px;
+        font-size: 25px;
+       margin: 3px 40px 0px 0px; -->
+
+<!--        border: 2px solid green;-->
+
+
+    <!-- }
+
+
+    input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    font-size: 25px;
+    appearance: radio;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 50px;
+    padding: initial;
+    border: initial;
+    padding: 6px 5px;
+}
+
+
+    .container h1{
+        text-align: center;
+    }
+
+    .container button{
+     margin: 3px 3px 0px 155px;
+        display: block;
+        color:black;
+
+        width:101px;
+        background-color: lightblue;
+
+    }
+
+    .forms{
+        color: black;
+    }
+
+    
+    .eror{
+        margin: 0px 9px;
+        color:white;
+        background-color: black;
+        border: 2px solid gray;
+        border-radius: 15px;
+        font-style: 20px;
+        cursor: pointer;
+        padding:-49px 10px;
+        margin:-186px 571px 72px 518px;
+    }
+
+</style>
+<body>
+
+
+    <header class="header">
+        <div class="left">
+<!--            <img src="img/logo.jpg" alt="">-->
+<!--            <div>fittness club</div>-->
+        <!-- </div>
+        <div class="center">
+            <ul class="navbar">
+                <li><a href="#" class="active">register</a></li>
+                <li><a href="#">login</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+
+        </div>
+        <div class="right">
+            <button class="btn">call us</button>
+            <button class="btn">email us</button>
+        </div>
+    </header>
+
+    <form action="register" method="POST">
+        {% csrf_token %}
+
+        <div class="container">
+            <h1 style="color: black;">REGISTER TO EXPENSE TRACKER</h1>
+
+
+
+            <div class="forms2">
+            NAME:<input type="text" name="firstname" placeholder="first name"><br>
+            </div>
+            <br>
+
+
+            <div class="forms3">
+            LASTNAME: <input type="text" name="lastname" placeholder="last name"><br>
+            </div>
+            <br>
+
+
+            <div class="forms1">
+                USERNAME:<input type="text" name="username" placeholder="user name"><br>
+            </div>
+            <br>
+
+
+            <div class="forms1">
+                PASSWORD:<input type="password" name="password1" placeholder="password"><br>
+            </div>
+
+            
+            <div class="forms1">
+                CONFIRM PASSWORD:<input type="password" name="password2" placeholder="confirm password"><br>
+            </div>
+            
+
+            <button> <input type="submit"></button>
+            <div class="signin">
+                <p>if already registered then </p>
+                <a href="login">login</a>
+            </div>
+        </div>
+
+    </form>
+
+    
+    <div class="eror">
+
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+    </div>
+    
+
+</body>
+</html>   -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+
+    <form action="login" method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="username"><br>
+        <input type="password" name="password" placeholder="password"><br>
+        <input type="submit">
+    </form>
+
+    
+    <div>
+
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+    </div>
+    
+</body>
+</html> -->
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+</head>
+
+<style>
+
+    body {
+        background: #077054;
+        color: #315f52;
+        font-family: 'latoregular';
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+   
+
+
+<!--    body {-->
+<!--    {% load static %}-->
+<!--    background: white url(" expen.jpeg ") no-repeat;-->
+<!--    {% load static %}-->
+<!--}-->
+
+
+
+
+<!-- 
+    .left{
+
+        /* border: 2px solid red; */
+        display: inline-block;
+        position: absolute;
+        left:34px;
+        top: 20px;
+    }
+
+    .center{
+           /* border: 2px solid blue; */
+           display: block;
+           margin: 20px auto;
+           width:40%;
+    }
+
+    .right{
+
+        /* border: 2px solid yellow; */
+        position: absolute;
+        top: 20px;
+        right:10px;
+        display: inline-block;
+    } -->
+<!-- 
+    .navbar{
+        display: inline-block;
+<!--        background-color:blue;-->
+    <!-- } -->
+<!-- 
+    .navbar li{ -->
+        <!-- display: inline-block;
+        font-size: 20px;
+    }
+
+    .navbar li a{
+        color: white;
+        text-decoration: none;
+        padding: 35px;
+        ;
+    } -->
+<!-- 
+
+    .navbar li a:hover,.navbar li a.active{
+        text-decoration: underline;
+        color: gray;
+    }
+
+    .left img{
+        width: 125px;
+    }
+
+    .left div{ -->
+        <!-- text-align: center;
+    }
+
+    .btn{
+        margin: 0px 9px;
+        color:white;
+        background-color: black;
+        padding:4px 14px;
+        border: 2px solid gray;
+        border-radius: 15px;
+        font-style: 20px;
+        cursor: pointer;
+    }
+
+    .btn:hover{ -->
+        <!-- background-color: rgb(0, 2, 128);
+    }
+
+    .container{
+        border: 5px solid black;
+        margin: 120px 880px;
+        padding:51px 5px;
+        width: 30%;
+        border-radius: 20%;
+        color:black;
+    }
+
+    
+    .container{
+        background: #ffffff;
+        margin: 1px auto 0;
+        overflow: hidden;
+        padding: 45px 40px 46px;
+    } -->
+
+
+    <!-- .forms1 input{  -->
+<!--        text-align: center;-->
+<!--        display: block;-->
+        <!-- width: 250px;
+        color:black;
+        padding: 6px 5px;
+        margin: 3px 3px 0px 30px;
+        border: 2px solid green;
+    } -->
+
+      <!-- .forms2 input{ -->
+<!--        text-align: center;-->
+<!--        display: block;-->
+        <!-- width: 250px;
+        color:black;
+        padding: 6px 5px;
+        margin: 3px 3px 0px 69px;
+        border: 2px solid green;
+    } -->
+<!-- 
+      .forms3 input{
+
+        width: 250px;
+        color:black;
+        padding: 6px 5px;
+        
+        border: 2px solid green;
+        margin: 3px 3px 0px 28px;
+    } -->
+
+
+    <!-- .formss{
+    color:black;
+
+    }
+
+    .formss input{
+    color:black;
+           padding: 6px 5px;
+        margin: 11px auto;
+        border: 2px solid green;
+
+
+} -->
+
+    <!-- .signin{
+       text-align: center;
+       display: block;
+       padding: 6px 5px;
+       font-weight: bold;
+        line-height: 20px;
+        font-size: 25px;
+       margin: 3px 40px 0px 0px;  -->
+
+<!--        border: 2px solid green;-->
+
+
+    <!-- } -->
+
+<!-- 
+    input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    font-size: 25px;
+    appearance: radio;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 50px;
+    padding: initial;
+    border: initial;
+    padding: 6px 5px;
+}
+
+
+    .container h1{
+        text-align: center;
+    }
+
+    .container button{
+     margin: 3px 3px 0px 155px;
+        display: block;
+        color:black;
+
+        width:101px;
+        background-color: lightblue;
+
+    }
+
+    .forms{
+        color: black;
+    }
+
+    
+    .eror{
+        margin: 0px 9px;
+        color:white;
+        background-color: black;
+        border: 2px solid gray;
+        border-radius: 15px;
+        font-style: 20px;
+        cursor: pointer;
+        padding:-49px 10px;
+        margin:-183px 568px 72px 523px;
+    } -->
+
+<!-- </style> -->
+<!-- <body> -->
+
+
+    <!-- <header class="header"> -->
+        <!-- <div class="left"> -->
+<!--            <img src="img/logo.jpg" alt="">-->
+<!--            <div>fittness club</div>-->
+        <!-- </div>
+        <div class="center">
+            <ul class="navbar">
+                <li><a href="#" class="active">login</a></li>
+                <li><a href="#">register</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul> -->
+<!-- 
+        </div>
+        <div class="right">
+            <button class="btn">call us</button>
+            <button class="btn">email us</button>
+        </div>
+    </header> -->
+
+    <!-- <form action="login" method="POST">
+        {% csrf_token %}
+
+        <div class="container">
+            <h1 style="color: black;">LOGIN TO EXPENSE TRACKER</h1>
+
+
+
+
+            <div class="forms1">
+                USERNAME:<input type="text" name="username" placeholder="username"><br>
+            </div>
+            <br>
+
+
+            <div class="forms1">
+                PASSWORD:<input type="password" name="password" placeholder="password"><br>
+            </div>
+
+           
+            
+
+            <button> <input type="submit"></button>
+            <div class="signin">
+                <p>if not registered then </p>
+                <a href="register">register</a>
+            </div>
+        </div>
+
+    </form> -->
+
+<!--     
+    <div class="eror">
+
+        {% for message in messages %}
+        <h3> {{message}} </h3>
+        {% endfor %}
+    </div>
+    
+
+</body>
+</html>  -->
+
+
+{% load static %}
+
+<!--DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/register_page.css' %}">
+</head>
+<body>
+<header>
+
+
+    <div class="main">
+        <ul>
+            <li class="active"><a href="/about">About</a></li>
+            <li><a href="/support">Support</a></li>
+        </ul>
+    <div class="title">
+         <h1>Expense Tracker</h1>
+    </div>
+    <div class="button">
+        <a href="/register" class="btn">Register</a>
+        <a href="/login" class="btn">Login</a>
+    </div>
+
+<div>
+
+    <form  action="" method="POST">
+        {% csrf_token %}
+        <ul class="first_name"> First Name: <input type="text" name="first_name" placeholder="First Name"><br></ul>
+        <ul class="last_name">Last Name: <input type="text" name="last_name" placeholder="Last Name"><br></ul>
+       <ul class="username"> Username: <input type="text" name="username" placeholder="Username"><br></ul>
+       <ul class="email"> E-mail:  <input type="email" name="email" placeholder="E-mail"><br></ul>
+       <ul class="password1" > Password: <input type="password" name="password1" placeholder="Password"><br></ul>
+       <ul  class="password2"> Confirm Password: <input type="password" name="password2" placeholder="Confirm Password"><br></ul>
+        <input class="submit" type="Submit">
+
+    </form>
+</div>
+    </div>
+    <div class="messages">
+    {% for message in messages %}
+    <b>{{ message }}</b>
+    {% endfor %}
+
+
+</div>
+
+</header>
+</body>
+</html-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Expense Tracker</title>
+
+
+
+    <link rel="stylesheet" href= {% static "https://fonts.googleapis.com/css?family=Open+Sans:400,600" %} />
+    <link rel="stylesheet" href={% static '/css/all.min.css'%} />
+    <link rel="stylesheet" href={% static '/css/bootstrap.min.css'%} />
+    <link rel="stylesheet" href={% static '/slick/slick.css' %} />
+    <link rel="stylesheet" href={% static 'slick/slick-theme.css' %}/>
+    <link rel="stylesheet" href={% static 'css/magnific-popup.css'%}/>
+    <link rel="stylesheet" href={% static 'css/templatemo-dream-pulse.css' %} />
+  </head>
+  <body>
+  <style>.tm-brand {
+    font-size: 2rem;
+}</style>
+    <main class="container-fluid">
+      <div class="row">
+          <nav id="tmSidebar" class="tm-bg-black-transparent tm-sidebar">
+            <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="tm-sidebar-sticky">
+              <div class="tm-brand-box">
+                <div class="tm-double-border-1">
+                  <div class="tm-double-border-2">
+                    <h1 class="tm-brand text-uppercase">Expense tracker</h1>
+                  </div>
+                </div>
+              </div>
+
+
+              <ul id="tmMainNav" class="nav flex-column text-uppercase text-right tm-main-nav">
+
+                <li class="nav-item">
+
+                  <a href="/login" class="nav-link active">
+                    <span class="d-inline-block mr-3">Login</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/register" class="nav-link">
+                    <span class="d-inline-block mr-3">Register</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/about" class="nav-link">
+                    <span class="d-inline-block mr-3">About Us</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="/contact" class="nav-link">
+                    <span class="d-inline-block mr-3">Contact Us</span>
+                    <span class="d-inline-block tm-white-rect"></span>
+                  </a>
+                </li>
+
+              </ul>
+                <footer class="text-center text-white small">
+                <p class="mb--0 mb-2">Connect With Us</p>
+
+              </footer>
+              <ul class="nav flex-row tm-social-links">
+                <li class="nav-item">
+                  <a href="https://facebook.com" class="nav-link tm-social-link">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://twitter.com" class="nav-link tm-social-link">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://dribbble.com" class="nav-link tm-social-link">
+                    <i class="fab fa-dribbble"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://linkedin.com" class="nav-link tm-social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
+
+            </div>
+          </nav>
+
+          <main role="main" class="ml-sm-auto col-12">
+            <div
+              class="parallax-window"
+              data-parallax="scroll"
+              data-image-src={% static 'img/dream-pulse-header.jpg' %}>
+              <div class="tm-section-wrap">
+                <section id="intro" class="tm-section">
+                  <div class="tm-bg-white-transparent tm-intro" style="background-color:rgba(128,128,128,0.7)">
+                        <h2 class="tm-section-title mb-5 text-uppercase tm-color-primary  " style="text-align:center; color:black; font-weight:bold;">Register</h2>
+                        <p class="tm-color-gray">
+
+                            <style>
+
+                                .typebox{
+  width: 100%;
+
+  overflow:hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin: 8px 0;
+
+  border-bottom: 1px solid #4caf50;
+}
+
+.typebox input{
+  border none;
+
+  outline: none;
+  background: none;
+  color : black;
+  font-size: 14px;
+  width: 80%;
+
+  margin: 10px;
+
+}
+::placeholder{
+  color: rgb(68, 67, 67);
+
+
+  }
+
+
+  
+
+
+
+.bt{
+  width: 250%;
+  background: #4caf50;
+  border: 2px solid #4caf50;
+  color: black;
+  padding: 5px;
+  font-size: 18px;
+  cursor: pointer;
+
+}
+
+
+
+
+
+
+ </style>
+
+                        </p>
+                        <table>
+                      <form action="" method="POST">
+                        {% csrf_token %}
+
+                         <div class="typebox">
+                             <style>.nowrap {
+  white-space: nowrap ;
+  font-weight: bold;
+   color : black;
+   text-decoration-color: black;
+}
+
+
+</style>
+
+                            
+                            <span class="nowrap" ><tr><td> <p style="color:black;"> First Name:</p> </td><td><input type="text" name="firstname" placeholder="firstname" style="background-color: rgb(179, 172, 172);"></td></tr></span>
+                        
+                            <!-- <br> -->
+                             <!-- <span class="nowrap">Last Name:<input type="text" name="lastname" placeholder="lastname"></span><br>
+                            <span class="nowrap">Username:<input type="text" name="username" placeholder="username"></span><br>
+                            <span class="nowrap">E-mail:<input type="email" name="email" placeholder="email"></span><br>
+                            <span class="nowrap">Password: <input type="password" name="password1" placeholder="password1"></span><br>
+                             <span class="nowrap">Confirm Password:<input type="password" name="password2" placeholder="password2"></span><br> -->
+                             <span class="nowrap"><tr><td><p style="color:black;"> Last Name:</p> </td><td><input type="text" name="lastname" placeholder="lastname" style="background-color: rgb(179, 172, 172);"></td></tr></span>
+                        
+                            <!-- <br> -->
+                            <span class="nowrap"><tr><td><p style="color:black;"> Username:</p> </td><td><input type="text" name="username" placeholder="username" style="background-color: rgb(179, 172, 172);"></td></tr></span>
+                        
+                            <!-- <br> -->
+                            <span class="nowrap"><tr><td><p style="color:black;">  E-mail:</p></td><td><input type="email" name="email" placeholder="email@email.com" style="background-color: rgb(179, 172, 172);"></td></tr></span>
+                        
+                            <!-- <br> -->
+                            <span class="nowrap"><tr><td><p style="color:black;"> Password:</p> </td><td><input type="password" name="password1" placeholder="password1"  style="background-color: rgb(179, 172, 172);"></td></tr></span>
+                        
+                            <!-- <br> -->
+                            <span class="nowrap"><tr><td><p style="color:black;"> Confirm Password:</p></td><td><input type="password" name="password2" placeholder="password2" style="background-color: rgb(179, 172, 172);"></td></tr></span>
+                        
+                            <!-- <br> -->
+
+                         </div>
+
+
+                         
+
+
+
+                         <tr><td><div class="center"><input class="bt" type="Submit" value="Register"></div></td></tr>
+                        
+
+                      </form>
+                    </table>
+
+                          
+                          <div class="messages" style="color:black; font-weight:bold; text-align:center">
+                          {% for message in messages %}
+                          <b>{{ message }}</b>
+                          {% endfor %}
+                          </div>
+
+
+                    </div>
+
+                </section>
+            </div>
+          </div>
+
+
+    <script src={% static 'js/jquery.min.js' %}></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>
+    <script src={% static 'js/parallax.min.js'%}></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/templatemo-scripts.js" ></script>
+  </body>
+</html>

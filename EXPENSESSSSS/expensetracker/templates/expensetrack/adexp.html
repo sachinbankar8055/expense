@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 6px 6px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<div class="sidenav">
+  <a  href="expense">Profile</a>
+  <a href="expens">expenses</a>
+  <a style="color:white;" href="adexp">Add expenses</a>
+  <a href="#">Contact us</a>
+  <a href="logout">logout</a>
+</div>
+
+<div class="main">
+    <h2>hello, {{user.first_name}} </h2>
+  <h2>Welcome to expense tracker</h2>
+  <p>Here you can add your expenses </p>
+
+<form action="adexp" method="POST">
+    {% csrf_token %}
+
+    <!-- <h2>username:<input type="text" name="username" placeholder="username"><br></h2> -->
+
+    <h2>DATE:<input type="date" id="date" name="date"></h2>
+
+    <h2>FOOD:<input type="text" name="food" placeholder="food"><br></h2>
+    <!-- <h2>PETROL:<input type="text" name="petrol" placeholder="petrol"><br></h2> -->
+    <h2>TRAVEL:<input type="text" name="travel" placeholder="travel"><br></h2>
+    <h2>SHOPPING:<input type="text" name="movie" placeholder="movie"><br></h2>
+    <!-- <h2>RENT:<input type="text" name="rent" placeholder="rent"><br></h2> -->
+    <h2>OTHER:<input type="text" name="other" placeholder="other"><br></h2>
+
+    <button> <input type="submit"></button>
+
+</form>
+
+<div class="eror">
+
+    {% for message in messages %}
+    <h3> {{message}} </h3>
+    {% endfor %}
+</div>
+
+</div>
+   
+</body>
+</html> 
+
+
