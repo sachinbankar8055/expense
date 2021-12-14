@@ -29,6 +29,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['127.0.0.1','bankar-expense-tracker.herokuapp.com']
 
 # ALLOWED_HOSTS = []
+#ONEEE
 
 
 # Application definition
