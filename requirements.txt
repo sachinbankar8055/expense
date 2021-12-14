@@ -20,7 +20,6 @@ pytz==2020.1
 requests==2.26.0
 s3transfer==0.5.0
 six==1.15.0
-sqlparse==0.4.1
 sudo==1.0.0
 urllib3==1.26.6
 whitenoise==5.3.0
